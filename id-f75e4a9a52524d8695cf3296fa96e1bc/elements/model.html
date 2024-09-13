@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>General</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>General</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"id-f75e4a9a52524d8695cf3296fa96e1bc", type:"ArchimateModel", name:decodeURL("General"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-4d3e4ecec9cf4fb4838c51bf09410f2f", contenttype:"Folder"});
+								dataFolders.push({id:"id-4d3e4ecec9cf4fb4838c51bf09410f2f", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-ca0b8c7cffed4e6cbd5a6355bdadb783", contenttype:"Folder"});
+								dataFolders.push({id:"id-ca0b8c7cffed4e6cbd5a6355bdadb783", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-3687c7138fcb4b2a8468b4855f3807a2", contenttype:"Folder"});
+								dataFolders.push({id:"id-3687c7138fcb4b2a8468b4855f3807a2", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-b9f39fbc883c425db4d3369cb17df98b", contenttype:"Folder"});
+								dataFolders.push({id:"id-b9f39fbc883c425db4d3369cb17df98b", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-ae7f1c0c017d40d0813d9aa85ba2dc41", contenttype:"Folder"});
+								dataFolders.push({id:"id-ae7f1c0c017d40d0813d9aa85ba2dc41", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-dcf5923addc6486aaa811c8c25c0deb3", contenttype:"Folder"});
+								dataFolders.push({id:"id-dcf5923addc6486aaa811c8c25c0deb3", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-c81f19f329da4316ae7bc41b61f74730", contenttype:"Folder"});
+								dataFolders.push({id:"id-c81f19f329da4316ae7bc41b61f74730", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-0abba7cd12e540939d58e206b11b239d", contenttype:"Folder"});
+								dataFolders.push({id:"id-0abba7cd12e540939d58e206b11b239d", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-f75e4a9a52524d8695cf3296fa96e1bc", contentid:"id-9bf42b8849a24a008b4145b28d0c9ae3", contenttype:"Folder"});
+								dataFolders.push({id:"id-9bf42b8849a24a008b4145b28d0c9ae3", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9bf42b8849a24a008b4145b28d0c9ae3", contentid:"id-5232b65ba67842e5b07bc9483c9bfc53", contenttype:"Folder"});
+									dataFolders.push({id:"id-5232b65ba67842e5b07bc9483c9bfc53", type:"Folder", name:decodeURL("Patterns"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-5232b65ba67842e5b07bc9483c9bfc53", contentid:"id-0956e097698b456d9eb9d1161f83fdb2", contenttype:"Folder"});
+										dataFolders.push({id:"id-0956e097698b456d9eb9d1161f83fdb2", type:"Folder", name:decodeURL("Shared+Database"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-0956e097698b456d9eb9d1161f83fdb2", contentid:"id-f8dac106d4ee4daea7c744615bb5f4d4", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-f8dac106d4ee4daea7c744615bb5f4d4", type:"ArchimateDiagramModel", name:decodeURL("Metamodel"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-0956e097698b456d9eb9d1161f83fdb2", contentid:"id-0eec4b06a7364394814ffe5ff7633e54", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-0eec4b06a7364394814ffe5ff7633e54", type:"ArchimateDiagramModel", name:decodeURL("Example"), documentation:decodeURL("")});
+
+										dataFoldersContent.push({folderid:"id-5232b65ba67842e5b07bc9483c9bfc53", contentid:"id-6aeeaf8025e444de8bc8032bbc25eeb8", contenttype:"Folder"});
+										dataFolders.push({id:"id-6aeeaf8025e444de8bc8032bbc25eeb8", type:"Folder", name:decodeURL("Messaging"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-6aeeaf8025e444de8bc8032bbc25eeb8", contentid:"id-791c0db84e2c46f686e1c04b5527c9e4", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-791c0db84e2c46f686e1c04b5527c9e4", type:"ArchimateDiagramModel", name:decodeURL("Metamodel"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-6aeeaf8025e444de8bc8032bbc25eeb8", contentid:"id-aa19f68b0e1e43f1b9d82fe87508541d", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-aa19f68b0e1e43f1b9d82fe87508541d", type:"ArchimateDiagramModel", name:decodeURL("Example"), documentation:decodeURL("")});
+
+										dataFoldersContent.push({folderid:"id-5232b65ba67842e5b07bc9483c9bfc53", contentid:"id-dfe5f8af03c842798015535e20091f80", contenttype:"Folder"});
+										dataFolders.push({id:"id-dfe5f8af03c842798015535e20091f80", type:"Folder", name:decodeURL("Data+Pipeline"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-dfe5f8af03c842798015535e20091f80", contentid:"id-3dcef19ee0424197831bdb31244ce9ff", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-3dcef19ee0424197831bdb31244ce9ff", type:"ArchimateDiagramModel", name:decodeURL("Metamodel"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-dfe5f8af03c842798015535e20091f80", contentid:"id-66998fecd89042eaa1e6d0140536456d", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-66998fecd89042eaa1e6d0140536456d", type:"ArchimateDiagramModel", name:decodeURL("Example"), documentation:decodeURL("")});
+
+										dataFoldersContent.push({folderid:"id-5232b65ba67842e5b07bc9483c9bfc53", contentid:"id-6a6c9538c29f41ecbaa7b90d613efc6e", contenttype:"Folder"});
+										dataFolders.push({id:"id-6a6c9538c29f41ecbaa7b90d613efc6e", type:"Folder", name:decodeURL("File+Transfer"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-6a6c9538c29f41ecbaa7b90d613efc6e", contentid:"id-12c9dd087bfa4b8688c7f17ef61709bf", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-12c9dd087bfa4b8688c7f17ef61709bf", type:"ArchimateDiagramModel", name:decodeURL("Metamodel"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-6a6c9538c29f41ecbaa7b90d613efc6e", contentid:"id-1a626cfa44064cf8af3b678a896f2ed8", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-1a626cfa44064cf8af3b678a896f2ed8", type:"ArchimateDiagramModel", name:decodeURL("Example"), documentation:decodeURL("")});
+
+										dataFoldersContent.push({folderid:"id-5232b65ba67842e5b07bc9483c9bfc53", contentid:"id-ef930be924f84309814ed115936c84ef", contenttype:"Folder"});
+										dataFolders.push({id:"id-ef930be924f84309814ed115936c84ef", type:"Folder", name:decodeURL("Remote+Procedure+Call"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-ef930be924f84309814ed115936c84ef", contentid:"id-60c10f960b1f46aa9b19ec3d609a39dc", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-60c10f960b1f46aa9b19ec3d609a39dc", type:"ArchimateDiagramModel", name:decodeURL("Example"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-ef930be924f84309814ed115936c84ef", contentid:"id-54daf12d6133422581474fae139f66b6", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-54daf12d6133422581474fae139f66b6", type:"ArchimateDiagramModel", name:decodeURL("Metamodel"), documentation:decodeURL("")});
+
+										dataFoldersContent.push({folderid:"id-5232b65ba67842e5b07bc9483c9bfc53", contentid:"id-46af807f0087473fa704a28ea34a105a", contenttype:"Folder"});
+										dataFolders.push({id:"id-46af807f0087473fa704a28ea34a105a", type:"Folder", name:decodeURL("REST+API"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-46af807f0087473fa704a28ea34a105a", contentid:"id-e9d880ece49b494d8f670ec83d5ff2cc", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-e9d880ece49b494d8f670ec83d5ff2cc", type:"ArchimateDiagramModel", name:decodeURL("Example"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-46af807f0087473fa704a28ea34a105a", contentid:"id-4a243b1f95264eb8bdf174534665f7e1", contenttype:"ArchimateDiagramModel"});
+												dataViews.push({id:"id-4a243b1f95264eb8bdf174534665f7e1", type:"ArchimateDiagramModel", name:decodeURL("Metamodel"), documentation:decodeURL("")});
+
+
+
+
+									dataFoldersContent.push({folderid:"id-9bf42b8849a24a008b4145b28d0c9ae3", contentid:"id-592c4d6533bd4a33a04dc7613323b5a6", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-592c4d6533bd4a33a04dc7613323b5a6", type:"ArchimateDiagramModel", name:decodeURL("Default+View"), documentation:decodeURL("")});
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

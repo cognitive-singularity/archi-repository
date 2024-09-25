@@ -1,0 +1,12 @@
+<archimate:FlowRelationship
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="Customer Credit Score"
+    id="id-3e2d19c0f0cc4bfc8330aea5dd925656">
+  <source
+      xsi:type="archimate:ApplicationService"
+      href="ApplicationService_id-892a2d3d7afe4474b1536739b0451f15.xml#id-892a2d3d7afe4474b1536739b0451f15"/>
+  <target
+      xsi:type="archimate:ApplicationComponent"
+      href="ApplicationComponent_id-685469bdf08344aca44c3694bd24f97b.xml#id-685469bdf08344aca44c3694bd24f97b"/>
+</archimate:FlowRelationship>
